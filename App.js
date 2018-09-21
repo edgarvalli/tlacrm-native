@@ -5,12 +5,17 @@ import { Icon } from 'react-native-elements';
 import { MenuProvider } from 'react-native-popup-menu';
 
 //Components
+import LoginScreen from './src/components/Login';
 import HomeScreen from "./src/components/Home";
 import LeadScreen from "./src/components/leads/LeadRoute";
 import ClientScreen from "./src/components/clients/ClientRoute";
 import JobScreen from "./src/components/jobs/JobRoute";
 
 const App = createDrawerNavigator({
+
+  Login: {
+    screen: LoginScreen
+  },
   
   Home: {
     screen: HomeScreen,
@@ -44,7 +49,7 @@ const App = createDrawerNavigator({
   }
 
 }, {
-  initialRouteName: "Job",
+  initialRouteName: "Login",
   navigationOptions: {
     headerStyle:{
       backgroundColor: "red",
